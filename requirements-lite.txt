@@ -1,0 +1,15 @@
+# Modo LITE: corre en cualquier máquina, sin GPU y sin descargar modelos.
+# (Es lo que se usó para generar el notebook de demo en este sandbox.)
+
+pymupdf==1.28.2          # extracción de texto de los PDF
+chromadb==1.5.9           # índice vectorial (denso)
+rank-bm25==0.2.2          # índice disperso
+scikit-learn==1.8.0       # TF-IDF + SVD (embedder lite) y router lite
+nltk==3.10.3               # stemming en español (algorítmico, sin descarga de datos)
+pandas==3.0.2               # tablas del notebook
+
+# Para ejecutar el notebook:
+jupyter==1.1.1
+ipykernel==7.3.0
+nbformat==5.11.1
+nbclient==0.11.0

@@ -1,0 +1,25 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Datos generados (reconstruibles con scripts/01_ingest_and_index.py)
+data/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Variables de entorno / secretos
+.env
+.env.*
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+# Modo PRODUCCIÓN: además de requirements-lite.txt, necesita GPU (o CPU con
+# más RAM) y acceso a Internet a huggingface.co para descargar los pesos de
+# BGE-M3, BGE-reranker-v2-m3 y Qwen3 la primera vez.
+#
+#   pip install -r requirements-lite.txt -r requirements-production.txt
+#   export RAG_MODE=production
+#   python scripts/01_ingest_and_index.py
+
+torch>=2.2                 # backend de FlagEmbedding / transformers
+FlagEmbedding>=1.2.10      # BGE-M3 (embeddings) + BGE FlagReranker
+transformers>=4.42         # Qwen3 (router semántico + generación), si LLM_BACKEND=hf
+accelerate>=0.30           # carga eficiente de Qwen3 en GPU/CPU
+
+# Si prefieres servir Qwen3 con Ollama en vez de cargarlo en el proceso
+# Python (LLM_BACKEND=ollama en leyes_rag/config.py), solo necesitas:
+requests>=2.31
